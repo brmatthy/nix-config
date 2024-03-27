@@ -14,7 +14,7 @@
         system = "x86_64-linux";
 
         modules = [
-          ./profile/thryus
+          ./profile/thryus/system
 
           home-manager.nixosModules.home-manager
           {
@@ -22,7 +22,7 @@
             home-manager.useUserPackages = true;
 
             home-manager.extraSpecialArgs = inputs;
-            home-manager.users.brent = import ./home;
+            home-manager.users.brent = import ./profile/thryus/home;
           }
         ];
       };
