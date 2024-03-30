@@ -9,8 +9,6 @@ in
 {
   # import the system modules wanted for this system
   imports = [
-    ./hardware-configuration.nix # set hardware configuration
-
     ../../../modules/system/grub-bootloader.nix { # set grub as bootloader
       _module.args = {
         inherit device;
@@ -47,6 +45,7 @@ in
     ../../../modules/system/pulseaudio.nix # use pulseaudio for sound
     ../../../modules/system/polkit.nix # start polkit on startup
 
+    ./hardware-configuration.nix # set hardware configuration
     ];
 
   nix.settings.experimental-features = ["nix-command" "flakes"]; # enable nix flakes
