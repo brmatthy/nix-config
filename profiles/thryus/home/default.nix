@@ -3,6 +3,7 @@ let
   theme = import ../../../modules/home/themes/frappe.nix;
 in 
 {
+  home.stateVersion = "23.05";
   imports = [
     ../../../modules/home/hyprland.nix { # use hyprland as window manager
       _module.args = {
