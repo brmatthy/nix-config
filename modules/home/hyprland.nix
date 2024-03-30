@@ -94,8 +94,8 @@
         "SUPER CTRL, R, exec, killall .waybar-wrapped && waybar & disown"
 
         # Common keybinds
-        "SUPER, RETURN, exec, ${term}"
-        "SUPER, B, exec, ${browser}"
+        "SUPER, RETURN, exec, kitty"
+        "SUPER, B, exec, firefox"
         "SUPER, F, exec, nautilus"
         "SUPER, Q, killactive"
         "SUPER, Space, exec, launcher"
@@ -192,8 +192,8 @@
 
     extraConfig = ''
       general {
-        col.active_border = 0xff${config.lib.stylix.colors.base09}
-        col.inactive_border = 0xff${config.lib.stylix.colors.base00}
+        col.active_border = 0xff${theme.peach}
+        col.inactive_border = 0xff${theme.base}
       }
     '';
 
