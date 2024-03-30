@@ -9,7 +9,7 @@ in
 {
   # import the system modules wanted for this system
   imports = [
-    /etc/nixos/hardware-configuration.nix # set hardware configuration
+    ./hardware-configuration.nix # set hardware configuration
 
     ../../../modules/system/grub-bootloader.nix { # set grub as bootloader
       _module.args = {
