@@ -10,18 +10,18 @@ in
         inherit theme;
       };
     }
-
-    ../../../modules/home/look/gtk.nix { # set gtk theme
-      _module.args = {
-        inherit theme;
-      };
-    }
-
-    ../../../modules/home/look/cursor.nix { # set cursor theme
-      _module.args = {
-        inherit theme;
-      };
-    }
+    #
+    # ../../../modules/home/look/gtk.nix { # set gtk theme
+    #   _module.args = {
+    #     inherit theme;
+    #   };
+    # }
+    #
+    # ../../../modules/home/look/cursor.nix { # set cursor theme
+    #   _module.args = {
+    #     inherit theme;
+    #   };
+    # }
   ];
 
 }
