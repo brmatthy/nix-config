@@ -14,13 +14,13 @@ in
         inherit device;
       };
     }
-
-    ../../../modules/system/default-users.nix { # add users accounts
-      _module.args = {
-        inherit usernames;
-      };
-    }
-
+    #
+    # ../../../modules/system/default-users.nix { # add users accounts
+    #   _module.args = {
+    #     inherit usernames;
+    #   };
+    # }
+    #
     ../../../modules/system/networking.nix { # set networking
       _module.args = {
         inherit hostname;
