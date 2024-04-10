@@ -15,11 +15,11 @@ in
       };
     }
 
-    ../../../modules/system/default-users.nix { # add users accounts
-      _module.args = {
-        inherit usernames;
-      };
-    }
+    # ../../../modules/system/default-users.nix { # add users accounts
+    #   _module.args = {
+    #     inherit usernames;
+    #   };
+    # }
 
     ../../../modules/system/networking.nix { # set networking
       _module.args = {
@@ -50,6 +50,14 @@ in
 
   nix.settings.experimental-features = ["nix-command" "flakes"]; # enable nix flakes
   nixpkgs.config.allowUnfree = true; # allow unfree software
+
+  users.extraUsers.brent = {
+    isNormalUser = true;
+    description = "brent";
+    extraGroups = [ "wheel" "audio" "video" "networkmanager" "docker" ];
+    useDefaultShell = true;
+    packages = with pkgs; [];
+  };
 
   # System packages
   environment.systemPackages = with pkgs; [
