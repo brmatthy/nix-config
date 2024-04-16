@@ -38,8 +38,8 @@ in
     # ../../../modules/system/garbage-collect.nix # enable weekly garbage collection
     # ../../../modules/system/printing.nix # enable printing
     # ../../../modules/system/fonts.nix # install fonts
-    #
-    # ../../../modules/system/wayland-sddm.nix # use sddm as wayland display manager
+
+    ../../../modules/system/wayland-sddm.nix # use sddm as wayland display manager
     # ../../../modules/system/hyprland.nix # use hyprland as the window manager
     # ../../../modules/system/dbus.nix
     # ../../../modules/system/pulseaudio.nix # use pulseaudio for sound
