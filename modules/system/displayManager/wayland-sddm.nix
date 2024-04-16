@@ -4,6 +4,9 @@
 
   services.xserver = {
     enable = true;
+    layout = "be";
+    xkbVariant = "wang";
+    xkbOptions = "caps:escape";
     displayManager.sddm = {
       enable = true;
       #wayland.enable = true;
