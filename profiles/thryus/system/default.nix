@@ -41,7 +41,7 @@ in
 
     ../../../modules/system/wayland-sddm.nix # use sddm as wayland display manager
     ../../../modules/system/hyprland.nix # use hyprland as the window manager
-    # ../../../modules/system/dbus.nix
+    ../../../modules/system/dbus.nix
     # ../../../modules/system/pulseaudio.nix # use pulseaudio for sound
     # ../../../modules/system/polkit.nix # start polkit on startup
 
