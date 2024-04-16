@@ -39,7 +39,7 @@ in
     ../../../modules/system/printing.nix # enable printing
     # ../../../modules/system/fonts.nix # install fonts
 
-    ../../../modules/system/wayland-sddm.nix # use sddm as wayland display manager
+    ../../../modules/system/displayManager/wayland-gdm.nix # use gdm as wayland display manager
     ../../../modules/system/hyprland.nix # use hyprland as the window manager
     ../../../modules/system/dbus.nix
     ../../../modules/system/pulseaudio.nix # use pulseaudio for sound
