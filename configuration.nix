@@ -80,11 +80,11 @@
   # And use unstable branch
   nixpkgs.config = {
     allowUnfree = true;
-    packageOverrides = pkgs: {
-      unstable = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/nixos-unstable.tar.gz") {
-	config = config.nixpkgs.config;
-      };
-    };
+    # packageOverrides = pkgs: {
+    #   unstable = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/nixos-unstable.tar.gz") {
+	  #   config = config.nixpkgs.config;
+    #   };
+    # };
   };
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ]; 
@@ -101,7 +101,7 @@
     lazygit
 
     stow
-    pkgs.unstable.distrobox
+    #pkgs.unstable.distrobox
 
     # terminal programs
     kitty
@@ -135,13 +135,12 @@
     pavucontrol
     #pulseaudio
     spotify
-    pkgs.unstable.vesktop
+    #pkgs.unstable.vesktop
     obsidian
     gnome.nautilus
     wl-clipboard
     kanshi
 
-    unstable.cosmic-randr
 
     wget
     zip
@@ -156,7 +155,7 @@
     vscode-langservers-extracted
     lua-language-server
     marksman
-    pkgs.unstable.typos-lsp
+    #pkgs.unstable.typos-lsp
 
     # formatters
     stylua
