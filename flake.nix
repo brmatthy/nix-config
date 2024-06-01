@@ -19,7 +19,7 @@
     nixosConfigurations.zyphron = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
-        .profiles/zyphron
+        ./profiles/zyphron
       ];
     };
   };
