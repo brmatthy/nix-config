@@ -45,7 +45,7 @@
   # allow flakes and nix-command
   nix.settings.experimental-features = [ "nix-command" "flakes" ]; 
 
-  services.xserver.libinput.touchpad.naturalScrolling = true;
+  services.libinput.touchpad.naturalScrolling = true;
 
   # install zsh
   programs.zsh.enable = true;
@@ -141,6 +141,7 @@
     vscode-langservers-extracted
     lua-language-server
     marksman
+    nil
     #pkgs.unstable.typos-lsp
 
     # formatters

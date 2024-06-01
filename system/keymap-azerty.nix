@@ -1,9 +1,9 @@
 {pkgs, ...}:
 {
   # Configure keymap in X11
-  services.xserver = {
+  services.xserver.xkb = {
     layout = "be";
-    xkbVariant = "wang";
+    variant = "wang";
   };
 
   # Configure console keymap
