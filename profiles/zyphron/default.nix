@@ -11,6 +11,7 @@
       ../../system/bootloader.nix   # include the bootloader config 
       ../../system/hyprland.nix     # set hyprland as the window manager
       ../../system/podman.nix       # use podman as the container manager
+      ../../system/keymap-azerty.nix # use azerty keymap.
     ];
   # Enable networking
   networking.networkmanager.enable = true;
@@ -34,24 +35,16 @@
     LC_TIME = "en_GB.UTF-8";
   };
 
-  # Configure keymap in X11
-  services.xserver = {
-    enable = true;
-    layout = "be";
-    xkbVariant = "wang";
-  };
+  # Enable xserver. Other config modules set depend on it.
+  services.xserver.enable = true;
 
-  # Configure console keymap
-  console.keyMap = "be-latin1";
-  
-  # laptop settings
-  # Hibernate on lidswitch
+  # machine shuts down on sleep, so don't sleep
   services.logind.lidSwitch = "ignore";
-  services.xserver.libinput.touchpad.naturalScrolling = true;
 
-  # allow usb
-  services.gvfs.enable = true;
-  services.udisks2.enable = true;
+  # allow flakes and nix-command
+  nix.settings.experimental-features = [ "nix-command" "flakes" ]; 
+
+  services.xserver.libinput.touchpad.naturalScrolling = true;
 
   # install zsh
   programs.zsh.enable = true;
@@ -85,7 +78,6 @@
     # };
   };
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ]; 
   # electron for obsidian
   nixpkgs.config.permittedInsecurePackages = [
     "electron-25.9.0"
@@ -128,10 +120,6 @@
     lua
     typescript
 
-    pipewire
-    playerctl
-    pavucontrol
-    #pulseaudio
     spotify
     #pkgs.unstable.vesktop
     obsidian
@@ -160,19 +148,6 @@
     black
     isort
   ];
-
-  #hardware.pulseaudio.enable = true;
-  #sound.enable = true;
-  #nixpkgs.config.pulseaudio = true;
-  # rtkit is optional but recommended
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-  };
-
   # Install nvim as the default text editor
   programs.neovim = {
     enable = true;
