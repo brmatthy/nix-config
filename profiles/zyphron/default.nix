@@ -126,7 +126,7 @@
     cmake
     python3
     gnumake
-    nodejs_21
+    nodejs_20
     lua
     typescript
 
