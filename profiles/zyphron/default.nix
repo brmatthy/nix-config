@@ -12,6 +12,7 @@
       ../../system/hyprland.nix     # set hyprland as the window manager
       ../../system/podman.nix       # use podman as the container manager
       ../../system/keymap-azerty.nix # use azerty keymap.
+      ../../system/pipewire.nix     # use pipewire for audio
     ];
   # Enable networking
   networking.networkmanager.enable = true;
