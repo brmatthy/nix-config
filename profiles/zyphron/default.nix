@@ -43,6 +43,14 @@
 
   services.libinput.touchpad.naturalScrolling = true;
 
+  #printing
+  services.printing.enable = true;
+  services.avahi = {
+    enable = true;
+    nssmdns = true;
+    openFirewall = true;
+  };
+
   # install zsh
   programs.zsh.enable = true;
 
