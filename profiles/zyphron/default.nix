@@ -1,5 +1,8 @@
 { config, pkgs, ... }:
-   
+let
+  hostname = "zyphron";
+  locale = "en_GB.UTF-8";
+in
 {
   imports =
     [ 
@@ -9,47 +12,20 @@
       ../../system/podman.nix       # use podman as the container manager
       ../../system/keymap-azerty.nix # use azerty keymap.
       ../../system/pipewire.nix     # use pipewire for audio
+      ../../system/printing.nix     # enable printing
+      ../../system/network.nix      # setup neworking
+      { _module.args = { inherit hostname; }; }
+      ../../system/i18n.nix         # setup locale 
+      { _module.args = { inherit locale; }; }
     ];
-  # Enable networking
-  networking.networkmanager.enable = true;
-  networking.hostName = "zyphron"; # Define your hostname.
 
-  # Set your time zone.
-  time.timeZone = "Europe/Brussels";
-
-  # Select internationalisation properties.
-  i18n.defaultLocale = "en_GB.UTF-8";
-
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "en_GB.UTF-8";
-    LC_IDENTIFICATION = "en_GB.UTF-8";
-    LC_MEASUREMENT = "en_GB.UTF-8";
-    LC_MONETARY = "en_GB.UTF-8";
-    LC_NAME = "en_GB.UTF-8";
-    LC_NUMERIC = "en_GB.UTF-8";
-    LC_PAPER = "en_GB.UTF-8";
-    LC_TELEPHONE = "en_GB.UTF-8";
-    LC_TIME = "en_GB.UTF-8";
-  };
-
-  # Enable xserver. Other config modules set depend on it.
-  services.xserver.enable = true;
-
-  # machine shuts down on sleep, so don't sleep
-  services.logind.lidSwitch = "ignore";
+  time.timeZone = "Europe/Brussels"; # Set your time zone.
+  services.xserver.enable = true; # Enable xserver. Other config modules set depend on it.
+  services.logind.lidSwitch = "ignore"; # machine shuts down on sleep, so don't sleep
+  services.libinput.touchpad.naturalScrolling = true; # set naturalScrolling
 
   # allow flakes and nix-command
   nix.settings.experimental-features = [ "nix-command" "flakes" ]; 
-
-  services.libinput.touchpad.naturalScrolling = true;
-
-  #printing
-  services.printing.enable = true;
-  services.avahi = {
-    enable = true;
-    nssmdns = true;
-    openFirewall = true;
-  };
 
   # install zsh
   programs.zsh.enable = true;
@@ -175,5 +151,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment?
-
 }
