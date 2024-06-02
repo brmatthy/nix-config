@@ -118,7 +118,7 @@
     typescript
 
     spotify
-    #pkgs.unstable.vesktop
+    vesktop
     obsidian
     gnome.nautilus
     wl-clipboard
