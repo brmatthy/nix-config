@@ -43,6 +43,7 @@ in
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
     shell = pkgs.zsh;
+    ignoreShellProgramCheck = true; # we set programs.zsh.enable in home-manager, so ignore the warning
   };
 
   # Allow unfree packages
