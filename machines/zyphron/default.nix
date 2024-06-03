@@ -37,14 +37,14 @@ in
   # };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  # users.users.brent = {
-  #   isNormalUser = true;
-  #   description = "brent";
-  #   extraGroups = [ "networkmanager" "wheel" ];
-  #   packages = with pkgs; [];
-  #   shell = pkgs.zsh;
-  # };
-  #
+  users.users.brent = {
+    isNormalUser = true;
+    description = "brent";
+    extraGroups = [ "networkmanager" "wheel" ];
+    packages = with pkgs; [];
+    shell = pkgs.zsh;
+  };
+
   # Allow unfree packages
   # And use unstable branch
   nixpkgs.config = {
