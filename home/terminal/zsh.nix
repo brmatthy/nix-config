@@ -2,9 +2,9 @@
 {
   programs.zsh = {
     enable = true;
-    enableAutosuggestions = true;
-    syntaxHighlighting.enable = true;
     enableCompletion = true;
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
     shellAliases = aliases;
   };
 }
