@@ -27,9 +27,6 @@ in
   # allow flakes and nix-command
   nix.settings.experimental-features = [ "nix-command" "flakes" ]; 
 
-  # install zsh
-  programs.zsh.enable = true;
-
   # kanshi systemd service
   systemd.user.services.kanshi = {
     description = "kanshi daemon";
@@ -40,14 +37,14 @@ in
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.brent = {
-    isNormalUser = true;
-    description = "brent";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
-    shell = pkgs.zsh;
-  };
-
+  # users.users.brent = {
+  #   isNormalUser = true;
+  #   description = "brent";
+  #   extraGroups = [ "networkmanager" "wheel" ];
+  #   packages = with pkgs; [];
+  #   shell = pkgs.zsh;
+  # };
+  #
   # Allow unfree packages
   # And use unstable branch
   nixpkgs.config = {
@@ -63,78 +60,6 @@ in
   nixpkgs.config.permittedInsecurePackages = [
     "electron-25.9.0"
   ];
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    # dev
-    git 
-    lazygit
-
-    stow
-    #pkgs.unstable.distrobox
-
-    # terminal programs
-    kitty
-    starship
-    eza
-    fastfetch
-    btop
-
-    firefox
-    bitwarden
-    waybar
-    wlr-randr
-    rofi-wayland
-    grimblast
-
-    ripgrep
-
-    rustc
-    cargo
-
-    clang
-    cmake
-    python3
-    gnumake
-    nodejs_20
-    lua
-    typescript
-
-    spotify
-    vesktop
-    obsidian
-    gnome.nautilus
-    wl-clipboard
-    kanshi
-
-
-    wget
-    zip
-    unzip
-
-    # language servers
-    cmake-language-server
-    nodePackages.pyright
-    rust-analyzer
-    pkgs.nodePackages.typescript-language-server
-    vscode-langservers-extracted
-    lua-language-server
-    marksman
-    nil
-    typos-lsp
-
-    # formatters
-    stylua
-    rustfmt
-    black
-    isort
-  ];
-  # Install nvim as the default text editor
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;	
-  };
 
   # Set the display manager
   services.xserver = {
