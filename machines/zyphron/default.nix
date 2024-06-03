@@ -42,7 +42,7 @@ in
     description = "brent";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
-    shell = pkgs.zsh;
+    #shell = pkgs.zsh;
   };
 
   # Allow unfree packages
