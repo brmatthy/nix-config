@@ -24,10 +24,10 @@ in
     ../home/terminal/kitty.nix
     ../home/terminal/starship.nix
     ../home/terminal/zsh.nix
+    ../home/hyprland.nix
     { _module.args = { inherit aliases; }; }
   ];
 
-  stylix.targets.hyprland.enable = false;
   stylix.targets.vim.enable = false;
 
   # Packages that should be installed to the user profile.
