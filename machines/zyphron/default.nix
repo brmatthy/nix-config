@@ -25,11 +25,6 @@ in
   services.logind.lidSwitch = "ignore"; # machine shuts down on sleep, so don't sleep
   services.libinput.touchpad.naturalScrolling = true; # set naturalScrolling
 
-  # stylix.targets.hyprland.enable = false;
-  # stylix.targets.vim.enable = false;
-  stylix.autoEnable = false;
-  stylix.targets.kitty.enable = true;
-
   # allow flakes and nix-command
   nix.settings.experimental-features = [ "nix-command" "flakes" ]; 
 

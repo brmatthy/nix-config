@@ -27,6 +27,9 @@ in
     { _module.args = { inherit aliases; }; }
   ];
 
+  stylix.targets.hyprland.enable = false;
+  stylix.targets.vim.enable = false;
+
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
     # dev
