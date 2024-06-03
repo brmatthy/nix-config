@@ -10,7 +10,8 @@
 # │░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
 # │░░░Brent░Matthys░on░03-06-2024░░░│
 # └─────────────────────────────────┘
-{ inputs, config, lib, pkgs }:
+{ pkgs, config, lib, ... }:
+
 {
   wayland.windowManager.hyprland = {
     enable = true;
