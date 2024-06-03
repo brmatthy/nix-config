@@ -15,7 +15,7 @@
 {
   wayland.windowManager.hyprland = {
     enable = true;
-    settings = {
+    settings.general = {
       "col.active_border" = lib.mkForce "rgb(${config.stylix.base16Scheme.base09})";
       "col.inactive_border" = lib.mkForce "rgb(${config.stylix.base16Scheme.base00})";
     };
