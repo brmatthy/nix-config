@@ -4,6 +4,9 @@
   home.username = "brent";
   home.homeDirectory = lib.mkDefault "/home/brent";
 
+  # Let home Manager install and manage itself.
+  programs.home-manager.enable = true;
+
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
     # dev
@@ -69,7 +72,7 @@
     isort
   ];
 
-  programs.zsh.enable = true;
+  #programs.zsh.enable = true;
 
   # Install nvim as the default text editor
   programs.neovim = {
@@ -87,6 +90,4 @@
   # changes in each release.
   home.stateVersion = "24.05";
 
-  # Let home Manager install and manage itself.
-  programs.home-manager.enable = true;
 }
