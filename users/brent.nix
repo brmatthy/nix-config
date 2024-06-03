@@ -31,6 +31,7 @@ in
     # dev
     git 
     lazygit
+    zsh
 
     stow
     #pkgs.unstable.distrobox
