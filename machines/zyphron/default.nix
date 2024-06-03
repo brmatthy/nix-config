@@ -17,6 +17,7 @@ in
       { _module.args = { inherit hostname; }; }
       ../../system/i18n.nix         # setup locale 
       { _module.args = { inherit locale; }; }
+      ../../stylix/catppuccin-frappe# use stylix
     ];
 
   time.timeZone = "Europe/Brussels"; # Set your time zone.

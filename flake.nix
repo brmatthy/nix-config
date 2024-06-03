@@ -17,12 +17,14 @@
       url = "github:nix-community/home-manager/release-24.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    stylix.url = "github:danth/stylix";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, stylix, ... }@inputs: {
     nixosConfigurations.zyphron = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
+        stylix.nixosModules.stylix
         ./machines/zyphron
         home-manager.nixosModules.home-manager
         {
