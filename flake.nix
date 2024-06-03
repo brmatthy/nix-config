@@ -28,6 +28,8 @@
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
+
+          home-manager.extraSpecialArgs = inputs;
           home-manager.users.brent = import ./profiles/zyphron/home.nix;
         }
       ];
