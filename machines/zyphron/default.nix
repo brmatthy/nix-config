@@ -28,13 +28,13 @@ in
   nix.settings.experimental-features = [ "nix-command" "flakes" ]; 
 
   # kanshi systemd service
-  systemd.user.services.kanshi = {
-    description = "kanshi daemon";
-    serviceConfig = {
-      Type = "simple";
-      ExecStart = ''${pkgs.kanshi}/bin/kanshi -c kanshi_config_file'';
-    };
-  };
+  # systemd.user.services.kanshi = {
+  #   description = "kanshi daemon";
+  #   serviceConfig = {
+  #     Type = "simple";
+  #     ExecStart = ''${pkgs.kanshi}/bin/kanshi -c kanshi_config_file'';
+  #   };
+  # };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   # users.users.brent = {

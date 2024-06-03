@@ -23,14 +23,14 @@
     nixosConfigurations.zyphron = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
-        ./profiles/zyphron/system.nix
+        ./machines/zyphron
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
 
           home-manager.extraSpecialArgs = inputs;
-          home-manager.users.brent = import ./profiles/zyphron/home.nix;
+          home-manager.users.brent = import ./users/brent.nix;
         }
       ];
     };
