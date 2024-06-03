@@ -2,7 +2,7 @@
 
 {
   home.username = "brent";
-  home.homeDirectory = lib.mkDefault "/home/brent";
+  home.homeDirectory = "/home/brent";
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
