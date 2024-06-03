@@ -21,10 +21,10 @@ in
 
   # include programs with configuration
   imports = [
-    ../home/terminal/kitty.nix
-    ../home/terminal/starship.nix
-    ../home/terminal/zsh.nix
-    { _module.args = { inherit aliases; }; }
+    # ../home/terminal/kitty.nix
+    # ../home/terminal/starship.nix
+    # ../home/terminal/zsh.nix
+    # { _module.args = { inherit aliases; }; }
   ];
 
   # Packages that should be installed to the user profile.
