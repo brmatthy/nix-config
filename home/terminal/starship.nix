@@ -4,7 +4,7 @@
     settings = {
       add_newline = false;
       format = "$os$directory
-      $character
+$character
       ";
       right_format = "$all";
 
@@ -16,7 +16,7 @@
 
       os = {
         disabled = false;
-        symbol = {
+        symbols = {
           NixOS = "[](blue) ";
         };
       };
