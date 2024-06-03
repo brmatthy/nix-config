@@ -5,7 +5,7 @@
       add_newline = false;
       format = "$os$directory
 $character
-      ";
+"; # this cannot be indented, since it will indent the prompt
       right_format = "$all";
 
       character = {
