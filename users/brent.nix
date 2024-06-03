@@ -1,11 +1,30 @@
 { config, pkgs, lib, ... }:
-
+let
+  aliases = {
+    v="nvim";
+    cmcd="cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1";
+    diff="diff --color=auto";
+    grep="grep --color=auto";
+    ls="eza --icons --color=always --group-directories-first";
+    player="if playerctl -l | grep -q 'spotify'; then playerctl -p spotify '$@'; else playerctl '$@'; fi";
+    rebuild="sudo nixos-rebuild switch";
+    mirror="hyprctl keyword monitor eDP-1,1920x1080@60,0x0,1,mirror,HDMI-A-1";
+    docked="wlr-randr --output eDP-1 --off --output DP-1 --pos 0,0 --transform normal --output HDMI-A-1 --pos 1920,-560 --transform 90";
+  };
+in
 {
   home.username = "brent";
   home.homeDirectory = lib.mkDefault "/home/brent";
 
   # Let home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  # include programs with configuration
+  imports = [
+    ../home/terminal/kitty.nix
+    ../home/terminal/zsh.nix
+    { _module.args = { inherit aliases; }; }
+  ];
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
@@ -17,7 +36,6 @@
     #pkgs.unstable.distrobox
 
     # terminal programs
-    kitty
     starship
     eza
     fastfetch
