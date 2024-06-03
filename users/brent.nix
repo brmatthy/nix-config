@@ -39,7 +39,7 @@ in
     # dev
     git 
     lazygit
-    zsh
+    # zsh
 
     stow
     #pkgs.unstable.distrobox
