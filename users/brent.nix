@@ -26,13 +26,13 @@ in
     # { _module.args = { inherit aliases; }; }
   ];
 
-  programs.zsh = {
-    # enable = true;
-    # enableCompletion = true;
-    # autosuggestion.enable = true;
-    # syntaxHighlighting.enable = true;
-    # shellAliases = aliases;
-  };
+  # programs.zsh = {
+  #   enable = true;
+  #   enableCompletion = true;
+  #   autosuggestion.enable = true;
+  #   syntaxHighlighting.enable = true;
+  #   shellAliases = aliases;
+  # };
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
