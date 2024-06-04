@@ -7,4 +7,14 @@
   stylix.cursor.name = "Bibata-Original-Amber";
   stylix.cursor.size = 20;
 
+  environment.systemPackages = [(
+    pkgs.catppuccin-sddm.override {
+      flavor = "latte";
+    }
+  )];
+
+  displayManager.sddm = {
+    theme = "catppuccin-latte";
+  };
+
 }

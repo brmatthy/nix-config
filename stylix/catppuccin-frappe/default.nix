@@ -10,4 +10,14 @@
   stylix.cursor.package = pkgs.bibata-cursors;
   stylix.cursor.name = "Bibata-Original-Amber";
   stylix.cursor.size = 20;
+
+  environment.systemPackages = [(
+    pkgs.catppuccin-sddm.override {
+      flavor = "frappe";
+    }
+  )];
+
+  displayManager.sddm = {
+    theme = "catppuccin-frappe";
+  };
 }

@@ -6,18 +6,19 @@ in
 {
   imports =
     [ 
-      ./hardware-configuration.nix  # include the hardware specific config
-      ../../system/bootloader.nix   # include the bootloader config 
-      ../../system/hyprland.nix     # set hyprland as the window manager
-      ../../system/podman.nix       # use podman as the container manager
-      ../../system/keymap-azerty.nix # use azerty keymap.
-      ../../system/pipewire.nix     # use pipewire for audio
-      ../../system/printing.nix     # enable printing
-      ../../system/network.nix      # setup neworking
+      ./hardware-configuration.nix          # include the hardware specific config
+      ../../system/bootloader.nix           # include the bootloader config 
+      ../../system/sddm.nix # use sddm as display manager
+      ../../system/hyprland.nix             # set hyprland as the window manager
+      ../../system/podman.nix               # use podman as the container manager
+      ../../system/keymap-azerty.nix        # use azerty keymap.
+      ../../system/pipewire.nix             # use pipewire for audio
+      ../../system/printing.nix             # enable printing
+      ../../system/network.nix              # setup neworking
       { _module.args = { inherit hostname; }; }
-      ../../system/i18n.nix         # setup locale 
+      ../../system/i18n.nix                 # setup locale 
       { _module.args = { inherit locale; }; }
-      ../../stylix/catppuccin-frappe# use stylix
+      ../../stylix/catppuccin-frappe        # use stylix
     ];
 
   time.timeZone = "Europe/Brussels"; # Set your time zone.
@@ -62,15 +63,6 @@ in
   nixpkgs.config.permittedInsecurePackages = [
     "electron-25.9.0"
   ];
-
-  # Set the display manager
-  services.xserver = {
-    displayManager.sddm = {
-      enable = true;
-      autoNumlock = true;
-    };
-  };
-
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
