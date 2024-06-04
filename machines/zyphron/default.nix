@@ -20,8 +20,6 @@ in
       ../../stylix/catppuccin-frappe# use stylix
     ];
 
-  stylix.targets.plymouth.enable = false;
-
   time.timeZone = "Europe/Brussels"; # Set your time zone.
   services.xserver.enable = true; # Enable xserver. Other config modules set depend on it.
   services.logind.lidSwitch = "ignore"; # machine shuts down on sleep, so don't sleep
