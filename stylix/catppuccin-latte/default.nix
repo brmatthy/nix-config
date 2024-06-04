@@ -13,7 +13,7 @@
     }
   )];
 
-  displayManager.sddm = {
+  services.xserver.displayManager.sddm = {
     theme = "catppuccin-latte";
   };
 
