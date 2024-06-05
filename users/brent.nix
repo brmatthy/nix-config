@@ -24,8 +24,8 @@ in
     ../home/terminal/kitty.nix
     ../home/terminal/starship.nix
     ../home/terminal/zsh.nix
-    ../home/hyprland.nix
     { _module.args = { inherit aliases; }; }
+    ../home/desktop/hyprland.nix
   ];
 
   stylix.targets.vim.enable = false;
