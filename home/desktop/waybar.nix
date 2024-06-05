@@ -1,4 +1,4 @@
-{pkgs, ...}:
+{pkgs, config, ...}:
 {
   programs.waybar = {
     enable = true;
@@ -8,9 +8,13 @@
         position = "top";
         output = ["DP-1" "eDP-1"];
         
-        modules-left = ["hyprland/workspaces"];
+        modules-left = ["custom/os" "hyprland/workspaces"];
         modules-center = ["clock"];
         #modules-right = ["network" "pulseaudio" "backlight" "battery" "custom/power"];
+
+        "custom/os" = {
+          format = "";
+        };
 
         "hyprland/workspaces" = {
           all-outputs = true;
@@ -36,5 +40,19 @@
         };
       };
     };
+
+    style = ''
+      window#waybar {
+        background-color: transparent;
+        transition-property: background-color;
+        transition-duration: 0.5s;
+      }
+
+      #custom-os {
+        background-color: ${config.stylix.base16Scheme.base00}
+        foreground-color: ${config.stylix.base16Scheme.base0C}
+      }
+
+    '';
   };
 }
