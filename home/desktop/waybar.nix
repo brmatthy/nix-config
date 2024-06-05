@@ -51,7 +51,7 @@
 
       #custom-os {
         background-color: #${config.lib.stylix.colors.base00};
-        color: #${config.lib.stylix.colors.base0c};
+        color: #${config.lib.stylix.colors.base0C};
       }
 
     '';
