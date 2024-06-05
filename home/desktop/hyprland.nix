@@ -23,8 +23,6 @@
     # };
     extraConfig = ''
       monitor=,preferred,auto,auto
-      # launch waybar
-      exec=~/.dotfiles/.config/waybar/start_waybar.sh
 
       # open to ws 1
       exec-once=hyperctl dispatch workspace 1

@@ -26,6 +26,7 @@ in
     ../home/terminal/zsh.nix
     { _module.args = { inherit aliases; }; }
     ../home/desktop/hyprland.nix
+    ../home/desktop/waybar.nix
   ];
 
   stylix.targets.vim.enable = false;
@@ -48,7 +49,6 @@ in
 
     firefox
     bitwarden
-    waybar
     wlr-randr
     rofi-wayland
     grimblast
