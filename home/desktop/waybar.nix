@@ -5,7 +5,7 @@
     settings = {
       mainBar = {
         layer = "top";
-        position = "top";
+        position = "left";
         output = ["DP-1" "eDP-1"];
         
         modules-left = ["custom/os" "hyprland/workspaces"];
@@ -14,6 +14,7 @@
 
         "custom/os" = {
           format = "";
+          tooltip = false;
         };
 
         "hyprland/workspaces" = {
@@ -44,13 +45,13 @@
     style = ''
       window#waybar {
         background-color: transparent;
-        transition-property: background-color;
-        transition-duration: 0.5s;
+        border-radius: 10px;
+        border-color: #${config.lib.stylix.colors.base09};
       }
 
       #custom-os {
         background-color: #${config.lib.stylix.colors.base00};
-        foreground-color: #${config.lib.stylix.colors.base0C};
+        color: #${config.lib.stylix.colors.base0c};
       }
 
     '';
