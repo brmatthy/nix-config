@@ -49,8 +49,8 @@
       }
 
       #custom-os {
-        background-color: #${config.stylix.base16Scheme.base00}
-        foreground-color: #${config.stylix.base16Scheme.base0C}
+        background-color: #${config.lib.stylix.colors.base00}
+        foreground-color: #${config.lib.stylix.colors.base0C}
       }
 
     '';
