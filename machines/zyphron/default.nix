@@ -8,7 +8,7 @@ in
     [ 
       ./hardware-configuration.nix          # include the hardware specific config
       ../../system/bootloader.nix           # include the bootloader config 
-      ../../system/sddm.nix # use sddm as display manager
+      ../../system/gdm.nix                 # use sddm as display manager
       ../../system/hyprland.nix             # set hyprland as the window manager
       ../../system/podman.nix               # use podman as the container manager
       ../../system/keymap-azerty.nix        # use azerty keymap.

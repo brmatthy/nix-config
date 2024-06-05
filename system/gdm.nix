@@ -2,9 +2,9 @@
 {
   # set the display manager
   services = {
-    displayManager.sddm = {
+    displayManager.gdm = {
       enable = true;
-      autoNumlock = true;
+      wayland = true;
     };
   };
 }
