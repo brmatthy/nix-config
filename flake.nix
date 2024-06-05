@@ -18,13 +18,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     stylix.url = "github:danth/stylix";
+    catppuccin.url = "github:catppuccin/nix";
   };
 
-  outputs = { self, nixpkgs, home-manager, stylix, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, stylix, catppuccin, ... }@inputs: {
     nixosConfigurations.zyphron = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
-        stylix.nixosModules.stylix
         ./machines/zyphron
         home-manager.nixosModules.home-manager
         {
@@ -32,8 +32,15 @@
           home-manager.useUserPackages = true;
 
           home-manager.extraSpecialArgs = inputs;
-          home-manager.users.brent = import ./users/brent.nix;
+          home-manager.users.brent = {
+            imports = [
+              ./users/brent.nix
+              catppuccin.homeManagerModules.catppuccin
+            ];
+          };
         }
+        stylix.nixosModules.stylix
+        catppuccin.nixosModules.catppuccin
       ];
     };
   };

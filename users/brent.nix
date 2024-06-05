@@ -28,6 +28,10 @@ in
     ../home/desktop/hyprland.nix
   ];
 
+  catppuccin.enable = true;
+  catppuccin.flavor = "frappe";
+  catppuccin.accent = "peach";
+
   stylix.targets.vim.enable = false;
 
   # set fonts

@@ -20,6 +20,7 @@ in
       { _module.args = { inherit locale; }; }
       ../../stylix/catppuccin-frappe        # use stylix
     ];
+  stylix.autoEnable = false;
 
   time.timeZone = "Europe/Brussels"; # Set your time zone.
   services.xserver.enable = true; # Enable xserver. Other config modules set depend on it.
