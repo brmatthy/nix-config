@@ -47,6 +47,12 @@
         transition-property: background-color;
         transition-duration: 0.5s;
       }
+
+      #custom-os {
+        background-color: #${config.stylix.base16Scheme.base00}
+        foreground-color: #${config.stylix.base16Scheme.base0C}
+      }
+
     '';
   };
 }
