@@ -43,8 +43,8 @@ in
     };
 
     monospace = {
-      package = pkgs.nerdfonts.override {fonts = ["RobotoMono"];};
-      name = "RobotoMono Nerd Font";
+      package = pkgs.nerdfonts.override {fonts = ["JetBrainsMono"];};
+      name = "JetBrainsMono Nerd Font";
     };
 
     emoji = {
