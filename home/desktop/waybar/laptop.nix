@@ -3,6 +3,11 @@
   imports = [
     ./modules/workspaces.nix
     ./modules/time.nix
+    ./modules/brightness.nix
+    ./modules/audio.nix
+    ./modules/network.nix
+    ./modules/utils.nix
+    ./modules/battery.nix
   ];
 
   programs.waybar.enable = true;
@@ -12,5 +17,11 @@
 
   programs.waybar.settings."mainbar".modules-left = ["group/time"];
   programs.waybar.settings."mainbar".modules-center = ["hyprland/workspaces"];
-  programs.waybar.settings."mainbar".modules-right = [];
+  programs.waybar.settings."mainbar".modules-right = [
+    "group/brightness"
+    "group/audio"
+    "group/network"
+    "group/utils"
+    "battery"
+  ];
 }
