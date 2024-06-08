@@ -5,13 +5,12 @@
     ./modules/time.nix
   ];
 
-
   programs.waybar.enable = true;
-  programs.waybar.settings.mainBar.layer = "top";
-  programs.waybar.settings.mainBar.position = "left";
-  programs.waybar.settings.mainBar.output = ["DP-1" "eDP-1"];
+  programs.waybar.settings."mainbar".layer = "top";
+  programs.waybar.settings."mainbar".position = "left";
+  programs.waybar.settings."mainbar".output = ["DP-1" "eDP-1"];
 
-  programs.waybar.settings.mainBar.modules-left = ["group/time"];
-  programs.waybar.settings.mainBar.modules-center = ["hyprland/workspaces"];
-  programs.waybar.settings.mainBar.modules-right = [];
+  programs.waybar.settings."mainbar".modules-left = ["group/time"];
+  programs.waybar.settings."mainbar".modules-center = ["hyprland/workspaces"];
+  programs.waybar.settings."mainbar".modules-right = [];
 }

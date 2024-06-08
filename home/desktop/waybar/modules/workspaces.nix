@@ -1,7 +1,8 @@
 {...}:
 {
-  programs.waybar.settings.mainbar."hyprland/workspaces" = {
+  programs.waybar.settings."mainbar"."hyprland/workspaces" = {
     all-outputs = true;
+    on-click = "activate";
     format = "{icon}";
     format-icons = {
       "1" = "1";
