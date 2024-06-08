@@ -26,7 +26,7 @@ in
     ../home/terminal/zsh.nix
     { _module.args = { inherit aliases; }; }
     ../home/desktop/hyprland.nix
-    ../home/desktop/waybar.nix
+    ../home/desktop/waybar/laptop.nix
   ];
 
   stylix.targets.vim.enable = false;
