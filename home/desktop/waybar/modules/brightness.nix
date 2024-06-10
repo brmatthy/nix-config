@@ -13,6 +13,7 @@
   };
 
   programs.waybar.settings."mainbar"."backlight" = {
+    scroll-step = 5;
     format = "{icon}";
     format-icons = [
       ""
@@ -66,6 +67,8 @@
       border-radius: 8px;
       border-style: solid;
       border-color: @text;
+      border-width: 1px;
+      background-color: @peach;
     }
   '';
 }
