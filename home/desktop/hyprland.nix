@@ -25,7 +25,7 @@
       exec-once=hyperctl dispatch workspace 1
 
       # launch waybar
-      exec=pkill waybar && waybar
+      exec=pkill waybar; waybar
 
       # ############## #
       # Input settings #
