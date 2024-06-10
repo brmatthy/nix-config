@@ -1,4 +1,4 @@
-{...}:
+{lib, ...}:
 {
   programs.waybar.settings."mainbar"."group/network" = {
     orientation = "inherit";
@@ -39,4 +39,16 @@
     tooltip = true;
     on-click = "kitty nmtui";
   };
+
+
+  programs.waybar.style = lib.mkAfter 
+  ''
+    #network.wifi {
+      padding-right: 4px;
+    }
+
+    #network.disconnected {
+      color: @red;
+    }
+  '';
 }

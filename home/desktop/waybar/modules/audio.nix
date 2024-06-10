@@ -76,7 +76,7 @@
       background-color: @base;
     }
 
-    /* sink normal */
+    /* sink normal: weird hack to fix waybar src muted bug (issue #416) */
     #pulseaudio:not(.muted) {
       color: @text;
     }
