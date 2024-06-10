@@ -76,14 +76,22 @@
       background-color: @base;
     }
 
+    /* sink normal */
+    #pulseaudio:not(.muted) {
+      color: @text;
+    }
+
+    /* sink muted */
     #pulseaudio.muted {
         color: @red;
     }
 
+    /* src normal*/
     #pulseaudio.mic {
       color: @green;
     }
 
+    /* src muted */
     #pulseaudio.mic.source-muted {
       color: @red;
     }
