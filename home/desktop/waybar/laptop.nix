@@ -54,5 +54,20 @@
       background: alpha(@base, 0.85);
       color: @text;
     }
+
+    #time {
+      background: @sky;
+      color: @base;
+      margin-bottom: 4px;
+    }
+
+    #custom-clock-icon {
+      font-size: 20px;
+      padding-right: 3px;
+    }
+
+    #clock.date {
+      padding-bottom: 4px;
+    }
   '';
 }

@@ -35,21 +35,4 @@
     rotate = 90;
   };
 
-  programs.waybar.style = lib.mkAfter
-  ''
-    #time {
-      background: @sky;
-      color: @base;
-      margin-bottom: 4px;
-    }
-
-    #custom-clock-icon {
-      font-size: 20px;
-      padding-right: 3px;
-    }
-
-    #clock.date {
-      padding-bottom: 4px;
-    }
-  '';
 }
