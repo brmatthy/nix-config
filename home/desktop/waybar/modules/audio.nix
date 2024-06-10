@@ -1,4 +1,4 @@
-{...}:
+{lib, ...}:
 {
   programs.waybar.settings."mainbar"."group/audio" = {
     orientation = "inherit";
@@ -51,4 +51,42 @@
     max = 100;
     orientation = "vertical";
   };
+
+
+  programs.waybar.style = lib.mkAfter
+  ''
+    #pulseaudio-slider slider {
+      background-color: transparent;
+      box-shadow: none;
+    }
+
+    #pulseaudio-slider highlight{
+      border-radius: 8px;
+      background-color: @text;
+    }
+
+    #pulseaudio-slider trough {
+      margin-top: 4px;
+      min-width: 6px;
+      min-height: 60px;
+      border-radius: 8px;
+      border-style: solid;
+      border-color: @text;
+      border-width: 1px;
+      background-color: @base;
+    }
+
+    #pulseaudio.muted {
+        color: @red;
+    }
+
+    #pulseaudio.mic {
+      color: @green;
+      padding-left: 4px;
+    }
+
+    #pulseaudio.mic.muted {
+      color: @red;
+    }
+  '';
 }

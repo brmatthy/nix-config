@@ -46,10 +46,6 @@
 
   programs.waybar.style = lib.mkAfter
   ''
-    #backlight {
-      color: @text;
-    }
-
     #backlight-slider slider {
       background-color: transparent;
       box-shadow: none;

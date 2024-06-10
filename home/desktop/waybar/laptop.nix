@@ -44,7 +44,7 @@
     window#waybar {
       border-radius: 8px;
       background: transparent;
-      color: @peach;
+      color: @text;
     }
 
     tooltip {
