@@ -1,6 +1,7 @@
-{...}:
+{config, lib, ...}:
 {
   imports = [
+    ./colours.nix
     ./modules/workspaces.nix
     ./modules/time.nix
     ./modules/brightness.nix
@@ -24,4 +25,26 @@
     "group/utils"
     "battery"
   ];
+
+  programs.waybar.style = lib.mkAfter
+  ''
+    * {
+      font-size: 16px;
+      font-family: "JetBrainsMono Nerd Font,JetBrainsMono NF";
+      min-width: 8px;
+      min-height: 0px;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      text-shadow: none;
+      padding: 0px;
+      border-radius: 8px;
+    }
+
+    window#waybar {
+      border-radius: 8px;
+      background: transparent;
+      color: @peach;
+    }
+  '';
 }
