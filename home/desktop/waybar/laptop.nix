@@ -55,19 +55,18 @@
       color: @text;
     }
 
-    #time {
-      background: @sky;
-      color: @base;
-      margin-bottom: 4px;
+    .modules-left {
+      margin: 3px;
+      background: @base;
     }
 
-    #custom-clock-icon {
-      font-size: 20px;
-      padding-right: 3px;
+    .modules-center {
+      margin: 3px;
     }
 
-    #clock.date {
-      padding-bottom: 4px;
+    .modules-right{
+      margin: 3px;
+      background: @base;
     }
   '';
 }

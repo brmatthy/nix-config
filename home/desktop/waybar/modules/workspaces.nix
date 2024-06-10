@@ -1,4 +1,4 @@
-{...}:
+{lib, ...}:
 {
   programs.waybar.settings."mainbar"."hyprland/workspaces" = {
     all-outputs = true;
@@ -17,4 +17,36 @@
       "10" = "󰙯";
     };
   };
+
+  programs.waybar.style = lib.mkAfter
+  ''
+    #workspaces {
+      border-radius: 8px;
+    }
+
+    #workspaces button {
+      background: transparent;
+      border-radius: 4px;
+      color: alpha(@text, 0.7);
+    }
+
+    #workspaces button.urgent {
+      font-weight: bold;
+      background: @red;
+      color: @base;
+    }
+
+    #workspaces button.visible {
+      padding: 4px 2px;
+      color: @peach;
+    }
+
+    #workspaces button.active {
+      padding: 4px 2px;
+      background: @peach;
+      color: @base;
+      border-radius: 4px;
+    }
+  '';
+
 }
