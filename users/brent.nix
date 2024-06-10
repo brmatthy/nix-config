@@ -30,6 +30,7 @@ in
   ];
 
   stylix.targets.vim.enable = false;
+  stylix.targets.waybar.enable = false;
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [

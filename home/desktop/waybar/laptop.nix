@@ -46,5 +46,13 @@
       background: transparent;
       color: @peach;
     }
+
+    tooltip {
+      border-radius: 8px;
+      padding: 2px;
+      border: 2px solid @peach;
+      background: alpha(@base, 0.85);
+      color: @text;
+    }
   '';
 }
