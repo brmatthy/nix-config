@@ -84,7 +84,7 @@
       color: @green;
     }
 
-    #pulseaudio.source-muted {
+    #pulseaudio.mic.source-muted {
       color: @red;
     }
   '';
