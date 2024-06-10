@@ -68,7 +68,7 @@
       border-style: solid;
       border-color: @text;
       border-width: 1px;
-      background-color: @peach;
+      background-color: @base;
     }
   '';
 }
