@@ -27,6 +27,7 @@ in
     { _module.args = { inherit aliases; }; }
     ../home/desktop/hyprland.nix
     ../home/desktop/waybar/laptop.nix
+    ../home/desktop/ags
   ];
 
   stylix.targets.vim.enable = false;
@@ -113,5 +114,4 @@ in
   # the home Manager release notes for a list of state version
   # changes in each release.
   home.stateVersion = "24.05";
-
 }

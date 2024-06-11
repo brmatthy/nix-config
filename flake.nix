@@ -18,9 +18,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     stylix.url = "github:danth/stylix";
+    # widget library
+    ags.url = "github:Aylur/ags";
   };
 
-  outputs = { self, nixpkgs, home-manager, stylix, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, stylix, ags, ... }@inputs: {
     nixosConfigurations.zyphron = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
@@ -34,6 +36,7 @@
           home-manager.users.brent = import ./users/brent.nix;
         }
         stylix.nixosModules.stylix
+        ags.homeManagerModules.default
       ];
     };
   };
