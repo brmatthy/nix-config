@@ -27,7 +27,6 @@ in
     { _module.args = { inherit aliases; }; }
     ../home/desktop/hyprland.nix
     ../home/desktop/waybar/laptop.nix
-    ../home/desktop/ags
   ];
 
   stylix.targets.vim.enable = false;
@@ -78,6 +77,8 @@ in
     wget
     zip
     unzip
+
+    ags
 
     # language servers
     cmake-language-server
