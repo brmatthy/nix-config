@@ -36,7 +36,7 @@
           home-manager.users.brent = import ./users/brent.nix;
         }
         stylix.nixosModules.stylix
-        ags.homeManagerModules.default
+        # ags.homeManagerModules.default
       ];
     };
   };
