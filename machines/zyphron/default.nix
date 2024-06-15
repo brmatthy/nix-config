@@ -30,11 +30,12 @@ in
   nix.settings.experimental-features = [ "nix-command" "flakes" ]; 
 
   # kanshi systemd service
+  services.kanshi.systemdTarget = "";
   systemd.user.services.kanshi = {
     description = "kanshi daemon";
     serviceConfig = {
       Type = "simple";
-      ExecStart = ''${pkgs.kanshi}/bin/kanshi -c ~/.dotfiles/.config/kanshi/config'';
+      ExecStart = ''${pkgs.kanshi}/bin/kanshi'';
     };
   };
 
