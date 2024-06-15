@@ -20,7 +20,7 @@
           {
             criteria = "Iiyama North America PLX2283H 11593014B8288";
             position = "1920,-560";
-            transform = 90;
+            transform = "90";
             scale = 1.0;
             mode = "1920x1080@60Hz";
           }
