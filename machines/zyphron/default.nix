@@ -29,16 +29,6 @@ in
   # allow flakes and nix-command
   nix.settings.experimental-features = [ "nix-command" "flakes" ]; 
 
-  # kanshi systemd service
-  services.kanshi.systemdTarget = "";
-  systemd.user.services.kanshi = {
-    description = "kanshi daemon";
-    serviceConfig = {
-      Type = "simple";
-      ExecStart = ''${pkgs.kanshi}/bin/kanshi'';
-    };
-  };
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.brent = {
     isNormalUser = true;

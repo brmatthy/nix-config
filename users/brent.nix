@@ -27,6 +27,7 @@ in
     { _module.args = { inherit aliases; }; }
     ../home/desktop/hyprland.nix
     ../home/desktop/waybar/laptop.nix
+    ../home/desktop/kanshi/laptop.nix
   ];
 
   stylix.targets.vim.enable = false;
