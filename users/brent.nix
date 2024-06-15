@@ -65,7 +65,6 @@ in
     python3
     gnumake
     nodejs_20
-    bun
     lua
     typescript
 
@@ -81,6 +80,10 @@ in
     unzip
 
     ags
+    bun
+    libnotify
+    sass
+    fd
 
     # language servers
     cmake-language-server
