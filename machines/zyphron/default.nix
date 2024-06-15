@@ -30,7 +30,7 @@ in
   nix.settings.experimental-features = [ "nix-command" "flakes" ]; 
 
   # kanshi systemd service
-  services.kanshi.systemdTarget = "";
+  #services.kanshi.systemdTarget = "";
   systemd.user.services.kanshi = {
     description = "kanshi daemon";
     serviceConfig = {
