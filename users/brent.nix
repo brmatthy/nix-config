@@ -50,6 +50,7 @@ in
     btop
 
     firefox
+    brave
     bitwarden
     wlr-randr
     rofi-wayland
