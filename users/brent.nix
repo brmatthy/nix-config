@@ -70,6 +70,7 @@ in
     typescript
 
     spotify
+    spicetify
     vesktop
     obsidian
     gnome.nautilus
