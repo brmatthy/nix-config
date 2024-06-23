@@ -114,6 +114,7 @@
       windowrulev2 = workspace 7, class:^(thunar)$
       windowrulev2 = workspace 7, class:^(nautilus)$
       windowrulev2 = workspace 6, class:^(firefox)$
+      windowrulev2 = workspace 6, class:^(brave)$
       windowrulev2 = workspace 9, class:^(Spotify)$
       windowrulev2 = workspace 10, class:^(discord)$
       windowrulev2 = workspace 10, class:^(vesktop)$
@@ -146,7 +147,7 @@
       bindm = $mainMod, mouse:273, resizewindow
 
       bind = $mainMod, Return, exec, kitty
-      bind = $mainMod, B, exec, firefox
+      bind = $mainMod, B, exec, brave
       bind = $mainMod, F, exec, nautilus 
       bind = $mainMod, Q, killactive, 
       bind = $mainMod, V, togglefloating, 
