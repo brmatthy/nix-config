@@ -66,6 +66,7 @@ in
     python3
     gnumake
     nodejs_20
+    sassc
     lua
     typescript
 
