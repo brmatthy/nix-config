@@ -66,7 +66,6 @@ in
     python3
     gnumake
     nodejs_20
-    sassc
     lua
     typescript
 
@@ -83,9 +82,12 @@ in
     unzip
 
     ags
+    gtksourceview
+    webkitgtk
     bun
     libnotify
     sass
+    sassc
     fd
 
     # language servers
