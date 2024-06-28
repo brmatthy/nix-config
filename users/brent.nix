@@ -33,9 +33,6 @@ in
   stylix.targets.vim.enable = false;
   stylix.targets.waybar.enable = false;
 
-  # for multimedia widget
-  services.gvfs.enable = true;
-
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
     # dev
