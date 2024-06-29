@@ -68,6 +68,7 @@ in
     nodejs_20
     lua
     typescript
+    awscli
 
     spotify
     spicetify-cli

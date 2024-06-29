@@ -4,7 +4,7 @@
     enable = true;
     systemdTarget = "hyprland-session.target";
 
-    profiles = {
+    settings = {
       undocked = {
         outputs = [
           {
