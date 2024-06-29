@@ -55,7 +55,6 @@ in
     wlr-randr
     rofi-wayland
     grimblast
-    steam
 
     ripgrep
 
