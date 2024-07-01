@@ -63,7 +63,6 @@ in
 
     clang
     cmake
-    python3
     python39
     gnumake
     nodejs_20
