@@ -7,6 +7,8 @@
   programs.nix-ld.libraries = with pkgs; [
     stdenv.cc.cc.lib
     zlib # numpy
-    libgcc # needed for some python packages
+    # needed for some python packages
+    libgcc 
+    libglvnd
   ];
 }
