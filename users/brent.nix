@@ -81,6 +81,7 @@ in
     wget
     zip
     unzip
+    poetry
 
     ags
     gtksourceview

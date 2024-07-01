@@ -17,6 +17,7 @@ in
       ../../system/network.nix              # setup neworking
       ../../system/battery.nix              # setup battery
       ../../system/multimedia.nix           # setup multimedia packages
+      ../../system/steam.nix           # setup multimedia packages
       { _module.args = { inherit hostname; }; }
       ../../system/i18n.nix                 # setup locale 
       { _module.args = { inherit locale; }; }
