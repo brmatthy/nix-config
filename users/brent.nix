@@ -70,6 +70,7 @@ in
     typescript
     awscli
     postman
+    sqlite
 
     spotify
     spicetify-cli
