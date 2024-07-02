@@ -69,6 +69,7 @@ in
     lua
     typescript
     awscli
+    postman
 
     spotify
     spicetify-cli
