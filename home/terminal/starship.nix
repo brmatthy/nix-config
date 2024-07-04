@@ -30,6 +30,10 @@ $character
         format = "[$all_status$ahead_behind]($style) ";
         modified = "*";
       };
+
+      aws = {
+        disabled = true;
+      };
     };
   };
 }
