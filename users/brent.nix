@@ -110,6 +110,7 @@ in
     rustfmt
     black
     isort
+    ruff
   ];
 
   #programs.zsh.enable = true;

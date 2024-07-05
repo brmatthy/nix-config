@@ -36,6 +36,20 @@
           }
         ];
       };
+
+      docket_intelliprove = {
+        outputs = [
+          {
+            criteria = "Samsung Electric Company C34H89x H4ZT205300";
+            position = "0,0";
+            mode = "3440x1440@60Hz";
+          }
+          {
+            criteria = "eDP-1";
+            position = "770,1440";
+          }
+        ];
+      };
     };
   };
 }
