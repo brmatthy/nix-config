@@ -1,0 +1,40 @@
+-- local configs = require("nvchad.configs.lspconfig")
+--
+-- local on_attach = configs.on_attach
+-- local on_init = configs.on_init
+-- local capabilities = configs.capabilities
+--
+--
+-- local lsp_zero_config = {
+--     call_servers = 'global',
+-- }
+--
+-- local servers = {
+--   "clangd",
+--   "cmake",
+--   "pylyzer",
+--   "rust_analyzer",
+--   "tsserver",
+--   "html",
+--   "eslint",
+--   "lua_ls",
+--   "marksman",
+--   "typos_lsp",
+--   "rnix",
+-- };
+--
+-- return {
+--     'VonHeikemen/lsp-zero.nvim',
+--     config = function()
+--         local lsp = require('lsp-zero')
+--         lsp.set_preferences(lsp_zero_config)
+--
+--         lsp.setup_servers(servers)
+--         lsp.on_attach(on_attach)
+--         lsp.setup()
+--     end,
+--     dependencies = {
+--         {'neovim/nvim-lspconfig'},
+--     },
+-- }
+return {}
