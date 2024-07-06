@@ -20,12 +20,7 @@ let
     { _module.args = { inherit aliases; }; }
   ];
 
-  machineImports = if hostname == "thryus" then
-    [
-
-    ]
-  else
-    [
+  machineImports = [
       ../home/desktop/waybar/laptop.nix
       ../home/desktop/kanshi/laptop.nix
     ];
