@@ -12,14 +12,25 @@ let
     docked="wlr-randr --output eDP-1 --off --output DP-1 --pos 0,0 --transform normal --output HDMI-A-1 --pos 1920,-560 --transform 90";
   };
 
-  imports = [
+  sharedImports = [
+    ../home/desktop/hyprland.nix
     ../home/terminal/kitty.nix
     ../home/terminal/starship.nix
     ../home/terminal/zsh.nix
     { _module.args = { inherit aliases; }; }
-
   ];
 
+  machineImports = if hostname == "thryus" then
+    [
+
+    ]
+  else
+    [
+      ../home/desktop/waybar/laptop.nix
+      ../home/desktop/kanshi/laptop.nix
+    ];
+
+  imports = sharedImports ++ machineImports;
 in
 {
   home.username = "brent";
@@ -29,11 +40,7 @@ in
   programs.home-manager.enable = true;
 
   # include programs with configuration
-  imports = imports ++ [
-    ../home/desktop/hyprland.nix
-    ../home/desktop/waybar/laptop.nix
-    ../home/desktop/kanshi/laptop.nix
-  ];
+  imports = imports;
 
   stylix.targets.vim.enable = false;
   stylix.targets.waybar.enable = false;
@@ -46,7 +53,6 @@ in
     # zsh
 
     stow
-    #pkgs.unstable.distrobox
 
     # terminal programs
     starship
