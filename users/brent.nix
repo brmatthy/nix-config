@@ -30,7 +30,7 @@ let
       ../home/desktop/kanshi/laptop.nix
     ];
 
-  imports = sharedImports ++ machineImports;
+  module_imports = sharedImports ++ machineImports;
 in
 {
   home.username = "brent";
@@ -40,7 +40,7 @@ in
   programs.home-manager.enable = true;
 
   # include programs with configuration
-  imports = imports;
+  imports = module_imports;
 
   stylix.targets.vim.enable = false;
   stylix.targets.waybar.enable = false;
@@ -88,6 +88,7 @@ in
     vesktop
     obsidian
     gnome.nautilus
+    gnome.gnome-disk-utility
     wl-clipboard
     kanshi
 
