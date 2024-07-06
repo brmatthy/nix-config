@@ -12,8 +12,6 @@ let
     docked="wlr-randr --output eDP-1 --off --output DP-1 --pos 0,0 --transform normal --output HDMI-A-1 --pos 1920,-560 --transform 90";
   };
 
-  kanshi_path = "../home/desktop/kanshi/${hostname}.nix";
-
   sharedImports = [
     ../home/fonts.nix
     ../home/terminal/git.nix
@@ -22,7 +20,7 @@ let
     ../home/terminal/starship.nix
     ../home/terminal/zsh.nix
     { _module.args = { inherit aliases; }; }
-    (import kanshi_path)
+    ../home/desktop/kanshi.nix
   ];
 
   machineImports = [
