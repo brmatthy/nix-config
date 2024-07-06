@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ pkgs, lib, hostname, ... }:
 let
   aliases = {
     v="nvim";
@@ -7,10 +7,19 @@ let
     grep="grep --color=auto";
     ls="eza --icons --color=always --group-directories-first";
     player="if playerctl -l | grep -q 'spotify'; then playerctl -p spotify '$@'; else playerctl '$@'; fi";
-    rebuild="sudo nixos-rebuild switch --flake .#zyphron";
+    rebuild="sudo nixos-rebuild switch --flake .#${hostname}";
     mirror="hyprctl keyword monitor eDP-1,1920x1080@60,0x0,1,mirror,HDMI-A-1";
     docked="wlr-randr --output eDP-1 --off --output DP-1 --pos 0,0 --transform normal --output HDMI-A-1 --pos 1920,-560 --transform 90";
   };
+
+  imports = [
+    ../home/terminal/kitty.nix
+    ../home/terminal/starship.nix
+    ../home/terminal/zsh.nix
+    { _module.args = { inherit aliases; }; }
+
+  ];
+
 in
 {
   home.username = "brent";
@@ -20,11 +29,7 @@ in
   programs.home-manager.enable = true;
 
   # include programs with configuration
-  imports = [
-    ../home/terminal/kitty.nix
-    ../home/terminal/starship.nix
-    ../home/terminal/zsh.nix
-    { _module.args = { inherit aliases; }; }
+  imports = imports ++ [
     ../home/desktop/hyprland.nix
     ../home/desktop/waybar/laptop.nix
     ../home/desktop/kanshi/laptop.nix

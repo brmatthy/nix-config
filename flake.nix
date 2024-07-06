@@ -21,20 +21,38 @@
   };
 
   outputs = { self, nixpkgs, home-manager, stylix, ... }@inputs: {
-    nixosConfigurations.zyphron = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      modules = [
-        ./machines/zyphron
-        home-manager.nixosModules.home-manager
-        {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
+    nixosConfigurations = {
+      zyphron = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./machines/zyphron
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
 
-          home-manager.extraSpecialArgs = inputs;
-          home-manager.users.brent = import ./users/brent.nix;
-        }
-        stylix.nixosModules.stylix
-      ];
+            home-manager.extraSpecialArgs = inputs;
+            home-manager.users.brent = import ./users/brent.nix;
+          }
+          stylix.nixosModules.stylix
+        ];
+      };
+
+      thryus = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./machines/thryus
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+
+            home-manager.extraSpecialArgs = inputs;
+            home-manager.users.brent = import ./users/brent.nix;
+          }
+          stylix.nixosModules.stylix
+        ];
+      };
     };
   };
 }
