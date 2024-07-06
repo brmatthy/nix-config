@@ -88,7 +88,6 @@ in
     vesktop
     obsidian
     gnome.nautilus
-    gnome.gnome-disk-utility
     wl-clipboard
     kanshi
 
