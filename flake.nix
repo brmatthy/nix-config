@@ -32,7 +32,7 @@
             home-manager.useUserPackages = true;
 
             home-manager.extraSpecialArgs = inputs;
-            home-manager.users.brent = import ./users/brent.nix;
+            home-manager.users.brent = import ./users/brent.nix {hostname = "zyphron";};
           }
           stylix.nixosModules.stylix
         ];
@@ -48,7 +48,7 @@
             home-manager.useUserPackages = true;
 
             home-manager.extraSpecialArgs = inputs;
-            home-manager.users.brent = import ./users/brent.nix;
+            home-manager.users.brent = import ./users/brent.nix {hostname = "thryus";};
           }
           stylix.nixosModules.stylix
         ];
