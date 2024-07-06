@@ -1,5 +1,6 @@
 { ... }:
 {
   # symlink nvim
-  xdg.configFile."nvim/".source = ../.config/nvim;
+  xdg.enable = true;
+  xdg.configFile."nvim".source = ../.config/nvim;
 }
