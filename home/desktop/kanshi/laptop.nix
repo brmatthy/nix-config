@@ -13,18 +13,18 @@
             status = "enable";
           }
         ];
-        exec = [
-          "hyprctl dispatch moveworkspacetomonitor \"1 0\""
-          "hyprctl dispatch moveworkspacetomonitor \"2 0\""
-          "hyprctl dispatch moveworkspacetomonitor \"3 0\""
-          "hyprctl dispatch moveworkspacetomonitor \"4 0\""
-          "hyprctl dispatch moveworkspacetomonitor \"5 0\""
-          "hyprctl dispatch moveworkspacetomonitor \"6 0\""
-          "hyprctl dispatch moveworkspacetomonitor \"7 0\""
-          "hyprctl dispatch moveworkspacetomonitor \"8 0\""
-          "hyprctl dispatch moveworkspacetomonitor \"9 0\""
-          "hyprctl dispatch moveworkspacetomonitor \"10 0\""
-        ];
+        # exec = [
+        #   "hyprctl dispatch moveworkspacetomonitor \"1 0\""
+        #   "hyprctl dispatch moveworkspacetomonitor \"2 0\""
+        #   "hyprctl dispatch moveworkspacetomonitor \"3 0\""
+        #   "hyprctl dispatch moveworkspacetomonitor \"4 0\""
+        #   "hyprctl dispatch moveworkspacetomonitor \"5 0\""
+        #   "hyprctl dispatch moveworkspacetomonitor \"6 0\""
+        #   "hyprctl dispatch moveworkspacetomonitor \"7 0\""
+        #   "hyprctl dispatch moveworkspacetomonitor \"8 0\""
+        #   "hyprctl dispatch moveworkspacetomonitor \"9 0\""
+        #   "hyprctl dispatch moveworkspacetomonitor \"10 0\""
+        # ];
       };
 
       docked_home = {
@@ -47,18 +47,18 @@
             status = "disable";
           }
         ];
-        exec = [
-          "hyprctl dispatch moveworkspacetomonitor \"1 2\""
-          "hyprctl dispatch moveworkspacetomonitor \"2 2\""
-          "hyprctl dispatch moveworkspacetomonitor \"3 2\""
-          "hyprctl dispatch moveworkspacetomonitor \"4 2\""
-          "hyprctl dispatch moveworkspacetomonitor \"5 2\""
-          "hyprctl dispatch moveworkspacetomonitor \"6 1\""
-          "hyprctl dispatch moveworkspacetomonitor \"7 1\""
-          "hyprctl dispatch moveworkspacetomonitor \"8 1\""
-          "hyprctl dispatch moveworkspacetomonitor \"9 1\""
-          "hyprctl dispatch moveworkspacetomonitor \"10 1\""
-        ];
+        # exec = [
+        #   "hyprctl dispatch moveworkspacetomonitor \"1 2\""
+        #   "hyprctl dispatch moveworkspacetomonitor \"2 2\""
+        #   "hyprctl dispatch moveworkspacetomonitor \"3 2\""
+        #   "hyprctl dispatch moveworkspacetomonitor \"4 2\""
+        #   "hyprctl dispatch moveworkspacetomonitor \"5 2\""
+        #   "hyprctl dispatch moveworkspacetomonitor \"6 1\""
+        #   "hyprctl dispatch moveworkspacetomonitor \"7 1\""
+        #   "hyprctl dispatch moveworkspacetomonitor \"8 1\""
+        #   "hyprctl dispatch moveworkspacetomonitor \"9 1\""
+        #   "hyprctl dispatch moveworkspacetomonitor \"10 1\""
+        # ];
       };
 
       docket_intelliprove = {
@@ -73,18 +73,18 @@
             position = "770,1440";
           }
         ];
-        exec = [
-          "hyprctl dispatch moveworkspacetomonitor \"1 2\""
-          "hyprctl dispatch moveworkspacetomonitor \"2 2\""
-          "hyprctl dispatch moveworkspacetomonitor \"3 2\""
-          "hyprctl dispatch moveworkspacetomonitor \"4 2\""
-          "hyprctl dispatch moveworkspacetomonitor \"5 2\""
-          "hyprctl dispatch moveworkspacetomonitor \"6 0\""
-          "hyprctl dispatch moveworkspacetomonitor \"7 0\""
-          "hyprctl dispatch moveworkspacetomonitor \"8 0\""
-          "hyprctl dispatch moveworkspacetomonitor \"9 0\""
-          "hyprctl dispatch moveworkspacetomonitor \"10 0\""
-        ];
+        # exec = [
+        #   "hyprctl dispatch moveworkspacetomonitor \"1 2\""
+        #   "hyprctl dispatch moveworkspacetomonitor \"2 2\""
+        #   "hyprctl dispatch moveworkspacetomonitor \"3 2\""
+        #   "hyprctl dispatch moveworkspacetomonitor \"4 2\""
+        #   "hyprctl dispatch moveworkspacetomonitor \"5 2\""
+        #   "hyprctl dispatch moveworkspacetomonitor \"6 0\""
+        #   "hyprctl dispatch moveworkspacetomonitor \"7 0\""
+        #   "hyprctl dispatch moveworkspacetomonitor \"8 0\""
+        #   "hyprctl dispatch moveworkspacetomonitor \"9 0\""
+        #   "hyprctl dispatch moveworkspacetomonitor \"10 0\""
+        # ];
       };
     };
   };
