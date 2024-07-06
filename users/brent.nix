@@ -20,7 +20,7 @@ let
     ../home/terminal/starship.nix
     ../home/terminal/zsh.nix
     { _module.args = { inherit aliases; }; }
-    ../home/desktop/kanshi/${hostname}.nix
+    "../home/desktop/kanshi/${hostname}.nix"
   ];
 
   machineImports = [
