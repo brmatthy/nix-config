@@ -56,6 +56,8 @@ in
     fastfetch
     btop
 
+    swaylock
+
     firefox
     brave
     bitwarden
