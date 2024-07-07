@@ -14,6 +14,7 @@ let
 
   sharedImports = [
     ../home/fonts.nix
+    ../home/scripts
     ../home/terminal/git.nix
     ../home/terminal/kitty.nix
     ../home/terminal/starship.nix
