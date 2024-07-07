@@ -14,6 +14,7 @@ in
       ../../system/keymap-azerty.nix        # use azerty keymap.
       ../../system/pipewire.nix             # use pipewire for audio
       ../../system/printing.nix             # enable printing
+      ../../system/pam.nix                  # enable pam for swaylock
       ../../system/network.nix              # setup neworking
       { _module.args = { inherit hostname; }; }
       ../../system/multimedia.nix           # setup multimedia packages
