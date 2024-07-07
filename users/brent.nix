@@ -6,7 +6,6 @@ let
     diff="diff --color=auto";
     grep="grep --color=auto";
     ls="eza --icons --color=always --group-directories-first";
-    player="if playerctl -l | grep -q 'spotify'; then playerctl -p spotify '$@'; else playerctl '$@'; fi";
     rebuild="sudo nixos-rebuild switch --flake .#${hostname}";
     mirror="hyprctl keyword monitor eDP-1,1920x1080@60,0x0,1,mirror,HDMI-A-1";
     docked="wlr-randr --output eDP-1 --off --output DP-1 --pos 0,0 --transform normal --output HDMI-A-1 --pos 1920,-560 --transform 90";
