@@ -40,7 +40,7 @@
       thryus_docked_home = {
         outputs = [
           {
-            criteria = "DP-2";
+            criteria = "DP-1";
             position = "1920,-560";
             transform = "90";
             scale = 1.0;
