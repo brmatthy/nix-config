@@ -10,6 +10,7 @@ in
       ../../system/bootloader.nix           # include the bootloader config 
       ../../system/gdm.nix                 # use sddm as display manager
       ../../system/hyprland.nix             # set hyprland as the window manager
+      ../../system/gpu.nix                  # set gpu options
       ../../system/podman.nix               # use podman as the container manager
       ../../system/keymap-azerty.nix        # use azerty keymap.
       ../../system/pipewire.nix             # use pipewire for audio
