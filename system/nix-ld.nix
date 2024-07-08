@@ -11,5 +11,7 @@
     libgcc 
     libglvnd
     glibc
+    factor-lang
+    scilab-bin
   ];
 }
