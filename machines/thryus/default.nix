@@ -10,6 +10,7 @@ in
       ../../system/bootloader.nix           # include the bootloader config 
       ../../system/gdm.nix                 # use sddm as display manager
       #../../system/i3.nix                   # use i3 as the window manager
+      ../../system/nix-ld.nix
       ../../system/hyprland.nix             # use hyprland as the window manager
       ../../system/gpu.nix                  # set gpu options
       ../../system/podman.nix               # use podman as the container manager

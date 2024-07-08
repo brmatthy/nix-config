@@ -10,5 +10,6 @@
     # needed for some python packages
     libgcc 
     libglvnd
+    glibc
   ];
 }
