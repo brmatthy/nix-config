@@ -69,6 +69,7 @@
           {
             criteria = "eDP-1";
             position = "770,1440";
+            scale = 1.0;
           }
         ];
       };
