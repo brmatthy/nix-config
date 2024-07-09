@@ -58,6 +58,10 @@ in
 
     swaylock
 
+    terraform
+    terragrunt
+    terraform-ls
+
     firefox
     brave
     bitwarden
