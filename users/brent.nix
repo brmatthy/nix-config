@@ -60,7 +60,7 @@ in
 
     terraform
     terragrunt
-    terraform-ls
+    terraform-lsp
 
     firefox
     brave
