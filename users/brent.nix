@@ -68,6 +68,7 @@ in
     wlr-randr
     rofi-wayland
     grimblast
+    rnote
 
     ripgrep
 
