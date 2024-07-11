@@ -85,6 +85,7 @@ in
     awscli
     postman
     sqlite
+    jq
 
     spotify
     spicetify-cli
