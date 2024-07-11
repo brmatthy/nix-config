@@ -69,6 +69,7 @@ in
     rofi-wayland
     grimblast
     rnote
+    streamlit
 
     ripgrep
 
