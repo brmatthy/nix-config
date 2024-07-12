@@ -55,6 +55,7 @@ in
     eza
     fastfetch
     btop
+    fzf
 
     swaylock
 
