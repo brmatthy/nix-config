@@ -80,7 +80,6 @@ in
     clang
     cmake
     python39
-    python39.torch
     gnumake
     nodejs_20
     lua
