@@ -44,7 +44,7 @@ in
     ignoreShellProgramCheck = true; # we set programs.zsh.enable in home-manager, so ignore the warning
   };
 
-  environment.systemPackages = with pkgs; [ nix-index ];
+  environment.systemPackages = with pkgs; [ nix-index ffmpeg_7 ];
 
   # Allow unfree packages
   # And use unstable branch
