@@ -71,6 +71,7 @@ in
     grimblast
     rnote
     streamlit
+    zed-editor
 
     ripgrep
 
