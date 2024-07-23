@@ -56,6 +56,8 @@ in
     fastfetch
     btop
     fzf
+    
+    ngrok
 
     swaylock
 
