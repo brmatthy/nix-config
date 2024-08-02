@@ -64,6 +64,7 @@ in
     terraform
     terragrunt
     terraform-lsp
+    pgadmin4
 
     firefox
     brave
