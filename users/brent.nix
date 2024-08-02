@@ -65,6 +65,7 @@ in
     terragrunt
     terraform-lsp
     pgadmin4
+    mysql-workbench
 
     firefox
     brave
